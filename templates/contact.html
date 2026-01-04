@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Contact</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+
+<nav>
+  <a href="/">Home</a>
+  <a href="/about">About</a>
+  <a href="/products">Products</a>
+  <a href="/contact" class="active">Contact</a>
+  <a href="/admin">Admin</a>
+</nav>
+
+<div class="container">
+  <h1>Contact Us</h1>
+
+  <form method="POST" action="/contact">
+    <label>Name</label>
+    <input type="text" name="name" required>
+
+    <label>Email</label>
+    <input type="email" name="email" required>
+
+    <label>Message</label>
+    <textarea name="message" required></textarea>
+
+    <button type="submit">Send</button>
+  </form>
+</div>
+
+</body>
+</html>
+
+

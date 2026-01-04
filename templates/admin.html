@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Admin – Enquiries</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+
+<nav>
+  <a href="/">Home</a>
+  <a href="/contact">Contact</a>
+  <a href="/admin" class = "active">Admin</a>
+</nav>
+
+<div class="container">
+  <h1>Customer Enquiries</h1>
+
+  {% if enquiries %}
+    {% for enquiry in enquiries %}
+      {% if enquiry.strip() %}
+        <div style="border-bottom:1px solid #ccc; padding:10px 0;">
+          <pre>{{ enquiry }}</pre>
+        </div>
+      {% endif %}
+    {% endfor %}
+  {% else %}
+    <p>No enquiries yet.</p>
+  {% endif %}
+</div>
+
+</body>
+</html>
