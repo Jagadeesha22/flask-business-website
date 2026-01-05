@@ -1,25 +1,28 @@
-<!DOCTYPE html>
+<!DOC<!DOCTYPE html>
 <html>
 <head>
-  <title>Admin – Enquiries</title>
+  <title>Admin – Enquiries | Lakshmi Jagadamba Bricks</title>
   <link rel="stylesheet" href="{{ url_for('static', filename='style_v2.css') }}">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
 
-<nav>
-  <a href="/">Home</a>
-  <a href="/contact">Contact</a>
-  <a href="/admin" class = "active">Admin</a>
+<nav class="navbar">
+  <div class="logo">🧱 Lakshmi Jagadamba Bricks</div>
+  <div class="nav-links">
+    <a href="/">Home</a>
+    <a href="/contact">Contact</a>
+  </div>
 </nav>
 
 <div class="container">
+ 
   <h1>Customer Enquiries</h1>
 
   {% if enquiries %}
     {% for enquiry in enquiries %}
       {% if enquiry.strip() %}
-        <div style="border-bottom:1px solid #ccc; padding:10px 0;">
+        <div style="border:1px solid #ccc; padding:15px; margin-bottom:15px;">
           <pre>{{ enquiry }}</pre>
         </div>
       {% endif %}
@@ -29,5 +32,11 @@
   {% endif %}
 </div>
 
+<footer>
+  <p><strong>Lakshmi Jagadamba Bricks</strong></p>
+  <p>Owners: K. S. R. Sai Krishna & K. Veerendra</p>
+</footer>
+
 </body>
 </html>
+

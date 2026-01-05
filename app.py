@@ -1,8 +1,10 @@
-from flask import Flask, render_template, request
+from flask import Flask, render_template, request, redirect, url_for
 from datetime import datetime
 import os
 
 app = Flask(__name__)
+ADMIN_PASSWORD = "Naidu@1234" 
+
 ENQUIRIES_FILE = os.path.join(app.root_path, "enquiries.txt")
 
 @app.route("/")
@@ -37,6 +39,12 @@ def contact():
 
 @app.route("/admin")
 def admin():
+    if request.method == "POST":
+        password = request.form.get("password")
+
+        if password != ADMIN_PASSWORD:
+            return render_template("admin_login.html", error="Invalid password")
+
     enquiries = []
 
     try:
