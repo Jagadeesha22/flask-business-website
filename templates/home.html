@@ -1,24 +1,78 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Bricks Business</title>
+  <title>Lakshmi Jagadamba Bricks</title>
   <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
 
-<nav>
-  <a href="/"class="active">Home</a>
-  <a href="/about">About</a>
-  <a href="/products">Products</a>
-  <a href="/contact">Contact</a>
-  <a href="/admin">Admin</a>
+<nav class="navbar">
+  <div class="logo">
+    🧱 Lakshmi Jagadamba Bricks
+  </div>
+
+  <div class="nav-links">
+    <a href="/" class="active">Home</a>
+    <a href="/about">About</a>
+    <a href="/products">Products</a>
+    <a href="/contact">Contact</a>
+    <a href="/admin">Admin</a>
+  </div>
 </nav>
 
 <div class="container">
-  <h1>Welcome to Our Bricks Business</h1>
-  <p>Quality bricks for strong construction.</p>
+
+  <!-- HERO SECTION -->
+  <div class="hero">
+    <h1>Lakshmi Jagadamba Bricks</h1>
+    <h2>20+ Years of Trusted Brick Manufacturing</h2>
+
+    <p>
+      We are a trusted bricks manufacturing business with over two decades
+      of experience in producing strong, durable, and reliable clay bricks
+      for residential and commercial construction.
+    </p>
+
+    <p>
+      <strong>Owners:</strong> K. S. R. Sai Krishna & K. Veerendra
+    </p>
+
+    <div class="buttons">
+      <a href="/contact" class="btn primary">Get a Quote</a>
+      <a href="/products" class="btn secondary">Our Products</a>
+    </div>
+  </div>
+
+  <div class="image-section">
+  <img src="{{ url_for('static', filename='images/burned-bricks.jpg') }}" alt="Burned bricks">
+  <img src="{{ url_for('static', filename='images/test-bricks.jpg') }}" alt="Bricks">
 </div>
+
+
+
+ 
+  <div class="features">
+    <div class="feature">✔ 20+ Years Industry Experience</div>
+    <div class="feature">✔ Premium Quality Burned & Raw Bricks</div>
+    <div class="feature">✔ Trusted by Local Builders</div>
+  </div>
+
+</div>
+
+<footer>
+  <p><strong>Lakshmi Jagadamba Bricks</strong></p>
+  <p>Owners: K. S. R. Sai Krishna & K. Veerendra</p>
+  <p>📞 Contact via WhatsApp or Contact Page</p>
+
+  <p class="admin-link">
+    <a href="/admin">Admin Login</a>
+  </p>
+
+  <p class="copyright">
+    © 2026 Lakshmi Jagadamba Bricks. All rights reserved.
+  </p>
+</footer>
 
 </body>
 </html>

@@ -1,27 +1,74 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Products</title>
+  <title>Our Products | Lakshmi Jagadamba Bricks</title>
   <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
 
-<nav>
-  <a href="/">Home</a>
-  <a href="/about">About</a>
-  <a href="/products">Products</a>
-  <a href="/contact">Contact</a>
+<nav class="navbar">
+  <div class="logo">🧱 Lakshmi Jagadamba Bricks</div>
+  <div class="nav-links">
+    <a href="/">Home</a>
+    <a href="/about">About</a>
+    <a href="/products" class="active">Products</a>
+    <a href="/contact">Contact</a>
+    <a href="/admin">Admin</a>
+  </div>
 </nav>
 
 <div class="container">
-  <h1>Our Products</h1>
-  <ul>
-    <li>Red Clay Bricks</li>
-    <li>Fly Ash Bricks</li>
-    <li>Concrete Bricks</li>
-  </ul>
+
+  <h1 class="page-title">Our Products</h1>
+  <p class="page-subtitle">
+    We manufacture quality clay bricks designed for durability,
+    strength, and long-lasting construction.
+  </p>
+
+  
+  <section class="product-section">
+    <h2>Burned Clay Bricks</h2>
+
+    <div class="product-images">
+      <img src="{{ url_for('static', filename='images/burned-bricks.jpg') }}">
+      <img src="{{ url_for('static', filename='images/bricks.jpg') }}">
+    </div>
+
+    <p class="product-desc">
+      Burned clay bricks are manufactured using controlled firing
+      processes to ensure high strength, durability, and resistance
+      to weather conditions. Suitable for residential and commercial
+      construction.
+    </p>
+  </section>
+
+  
+  <section class="product-section">
+    <h2>Unburned / Raw Clay Bricks</h2>
+
+    <div class="product-images">
+      <img src="{{ url_for('static', filename='images/unburn-bricks.jpg') }}">
+      <img src="{{ url_for('static', filename='images/unburn-bricks2.jpg') }}">
+    </div>
+
+    <p class="product-desc">
+      Unburned clay bricks are produced using quality clay with
+      consistent shaping. These bricks are used for specific
+      construction needs and further processing.
+    </p>
+  </section>
+
 </div>
+
+<footer>
+  <p><strong>Lakshmi Jagadamba Bricks</strong></p>
+  <p>Owners: K. S. R. Sai Krishna & K. Veerendra</p>
+  <p>📞 Contact via WhatsApp or Contact Page</p>
+  <p class="admin-link"><a href="/admin">Admin Login</a></p>
+  <p>© 2026 Lakshmi Jagadamba Bricks. All rights reserved.</p>
+</footer>
 
 </body>
 </html>
+

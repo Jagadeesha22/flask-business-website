@@ -2,7 +2,7 @@ from flask import Flask, render_template, request
 from datetime import datetime
 import os
 
-app = Flask(__name__, static_folder="static")
+app = Flask(__name__)
 ENQUIRIES_FILE = os.path.join(app.root_path, "enquiries.txt")
 
 @app.route("/")
