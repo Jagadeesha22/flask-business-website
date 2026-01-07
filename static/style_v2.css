@@ -1,0 +1,19 @@
+
+@media (max-width: 768px) {
+
+  .product-images {
+      grid-template-columns: 1fr !important;
+  }
+
+  .product-images img {
+      width: 100% !important;
+      height: auto !important;
+  }
+
+  pre {
+      white-space: pre-wrap;
+      word-wrap: break-word;
+      overflow-x: auto;
+      font-size: 14px;
+  }
+}
