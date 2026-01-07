@@ -1,53 +1,68 @@
+
+
 @media (max-width: 768px) {
 
   
-  .product-images {
-      grid-template-columns: 1fr !important;
+  body {
+    overflow-x: hidden;
   }
 
-  .product-images img {
-      width: 100% !important;
-      height: auto !important;
-  }
-
-
-  pre {
-      white-space: pre-wrap !important;
-      word-break: break-word !important;
-      overflow-wrap: anywhere !important;
-      max-width: 100% !important;
-      box-sizing: border-box !important;
-      font-size: 14px;
-      background: #f9f9f9;
-      padding: 12px;
-      border-radius: 6px;
-  }
-
-  .container div {
-      max-width: 100% !important;
-      overflow-x: hidden !important;
+ 
+  .container {
+    width: 95%;
+    max-width: 100%;
+    margin: 20px auto;
+    padding: 10px;
+    box-sizing: border-box;
   }
 
   
-  body {
-      overflow-x: hidden !important;
+  .navbar {
+    width: 100%;
+    max-width: 100%;
+    flex-direction: column;
+    align-items: flex-start;
   }
 
-  .container {
-      width: 92%;
-      margin: 20px auto;
-      padding: 10px;
+  .nav-links {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
   }
-  .enquiry-text {
+
+
+  .product-images {
+    grid-template-columns: 1fr;
+    width: 100%;
+  }
+
+  .product-images img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
+ 
+  .enquiry-box {
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+
+    border: 1px solid #ccc;
+    padding: 14px;
+    margin-bottom: 16px;
+    background: #fafafa;
+
     white-space: pre-wrap;
     word-break: break-word;
     overflow-wrap: anywhere;
-    max-width: 100%;
-    box-sizing: border-box;
+
     font-size: 14px;
+    line-height: 1.4;
+  }
+
 }
 
-
-}
 
 

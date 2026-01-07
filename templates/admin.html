@@ -1,4 +1,4 @@
-<!DOC<!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 <head>
   <title>Admin – Enquiries | Lakshmi Jagadamba Bricks</title>
@@ -16,14 +16,13 @@
 </nav>
 
 <div class="container">
- 
   <h1>Customer Enquiries</h1>
 
   {% if enquiries %}
     {% for enquiry in enquiries %}
       {% if enquiry.strip() %}
-        <div style="border:1px solid #ccc; padding:15px; margin-bottom:15px;">
-        <div class="enquiry-text">{{ enquiry }}</div>
+        <div class="enquiry-box">
+          {{ enquiry }}
         </div>
       {% endif %}
     {% endfor %}
@@ -39,4 +38,5 @@
 
 </body>
 </html>
+
 
