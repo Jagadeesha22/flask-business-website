@@ -23,7 +23,7 @@
     {% for enquiry in enquiries %}
       {% if enquiry.strip() %}
         <div style="border:1px solid #ccc; padding:15px; margin-bottom:15px;">
-          <pre>{{ enquiry }}</pre>
+        <div class="enquiry-text">{{ enquiry }}</div>
         </div>
       {% endif %}
     {% endfor %}
