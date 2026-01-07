@@ -37,24 +37,28 @@ def contact():
 
     return render_template("contact.html")
 
-@app.route("/admin")
+@app.route("/admin", methods=["GET", "POST"])
 def admin():
+    
     if request.method == "POST":
         password = request.form.get("password")
 
         if password != ADMIN_PASSWORD:
             return render_template("admin_login.html", error="Invalid password")
 
-    enquiries = []
-
-    try:
-        with open(ENQUIRIES_FILE, "r", encoding="utf-8") as f:
-            content = f.read().strip()
-            enquiries = content.split("------------------------------")
-    except FileNotFoundError:
         enquiries = []
+        try:
+            with open(ENQUIRIES_FILE, "r", encoding="utf-8") as f:
+                content = f.read().strip()
+                enquiries = content.split("------------------------------")
+        except FileNotFoundError:
+            enquiries = []
 
-    return render_template("admin.html", enquiries=enquiries)
+        return render_template("admin.html", enquiries=enquiries)
+
+   
+    return render_template("admin_login.html")
+
 
 
 if __name__ == "__main__":
