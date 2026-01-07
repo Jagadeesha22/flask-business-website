@@ -1,4 +1,3 @@
-
 @media (max-width: 768px) {
 
   .product-images {
@@ -15,5 +14,15 @@
       word-wrap: break-word;
       overflow-x: auto;
       font-size: 14px;
+      background: #f9f9f9;
+      padding: 12px;
+      border-radius: 6px;
   }
+
+  .container {
+      width: 92%;
+      margin: 20px auto;
+      padding: 10px;
+  }
+
 }
