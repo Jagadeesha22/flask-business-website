@@ -10,7 +10,7 @@
  
   .container {
     width: 95%;
-    max-width: 100%;
+    max-width: none;
     margin: 20px auto;
     padding: 10px;
     box-sizing: border-box;
@@ -34,13 +34,13 @@
 
   .product-images {
     grid-template-columns: 1fr;
-    width: 100%;
+   
   }
 
   .product-images img {
     width: 100%;
     height: auto;
-    display: block;
+    
   }
 
  
@@ -59,7 +59,7 @@
     overflow-wrap: anywhere;
 
     font-size: 14px;
-    line-height: 1.4;
+    
   }
 
 }
