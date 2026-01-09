@@ -1,9 +1,8 @@
-<!DOCTYPE html>
+<!DOC<!DOCTYPE html>
 <html>
 <head>
   <title>Admin – Enquiries | Lakshmi Jagadamba Bricks</title>
-  <link rel="stylesheet" href="{{ url_for('static', filename='style_v2.css') }}?v=12">
-
+  <link rel="stylesheet" href="{{ url_for('static', filename='style_v2.css') }}">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
@@ -17,13 +16,14 @@
 </nav>
 
 <div class="container">
+ 
   <h1>Customer Enquiries</h1>
 
   {% if enquiries %}
     {% for enquiry in enquiries %}
       {% if enquiry.strip() %}
-        <div class="enquiry-box">
-          {{ enquiry }}
+        <div style="border:1px solid #ccc; padding:15px; margin-bottom:15px;">
+          <pre>{{ enquiry }}</pre>
         </div>
       {% endif %}
     {% endfor %}
@@ -39,5 +39,4 @@
 
 </body>
 </html>
-
 
